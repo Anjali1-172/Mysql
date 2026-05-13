@@ -1,7 +1,7 @@
 USE Amex_Project;
 GO
 
--- 1. Create Customer Dimension
+--  Customer Dimension
 CREATE TABLE Dim_Customers (
     cc_num BIGINT PRIMARY KEY,
     first_name VARCHAR(50),
@@ -18,7 +18,7 @@ CREATE TABLE Dim_Customers (
     city_pop INT
 );
 
--- 2. Create Merchant Dimension
+--Merchant Dimension
 CREATE TABLE Dim_Merchants (
     merchant_id INT IDENTITY(1,1) PRIMARY KEY,
     merchant_name VARCHAR(255),
@@ -27,7 +27,7 @@ CREATE TABLE Dim_Merchants (
     merch_long FLOAT
 );
 
--- 3. Create Fact Table
+--Fact Table
 CREATE TABLE Fact_Transactions (
     trans_num VARCHAR(100) PRIMARY KEY,
     trans_date_trans_time DATETIME,
